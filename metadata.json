@@ -1,0 +1,6 @@
+{
+  "name": "ACM & AI Quiz Challenge",
+  "description": "Interactive, highly-stylized benchmark quiz covering ACM history, Turing Awards, and core Artificial Intelligence concepts with real-time leaderboard and live scoring.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

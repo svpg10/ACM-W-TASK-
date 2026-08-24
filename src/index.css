@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Cabinet Grotesk', 'Satoshi', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.01em;
+  }
+  
+  h1, h2, h3, .font-display {
+    font-family: 'Clash Display', 'Cabinet Grotesk', 'Syne', sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  .font-syne {
+    font-family: 'Clash Display', 'Cabinet Grotesk', 'Syne', sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  .font-mono-code {
+    font-family: 'Space Grotesk', monospace;
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    font-family: 'Cabinet Grotesk', 'Satoshi', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom visual utilities reflecting the aesthetic in the prompt screenshot */
+.bg-canary {
+  background-color: #F8C51C;
+}
+
+.text-canary {
+  color: #F8C51C;
+}
+
+.border-canary {
+  border-color: #F8C51C;
+}
+
+.bg-dark-surface {
+  background-color: #161410;
+}
+
+.bg-dark-card {
+  background-color: #1C1914;
+}
+
+.dashed-pill {
+  border: 1.5px dashed rgba(248, 197, 28, 0.4);
+  border-radius: 9999px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #12110e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a261f;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F8C51C;
+}
+
+/* Subtle animation classes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 7s ease-in-out 2s infinite;
+}

@@ -1,0 +1,62 @@
+{
+  "entities": {
+    "LeaderboardEntry": {
+      "title": "LeaderboardEntry",
+      "description": "High score and ranking record for a player's quiz run",
+      "type": "object",
+      "properties": {
+        "playerName": {
+          "type": "string",
+          "description": "Callsign or name of the player",
+          "minLength": 1,
+          "maxLength": 25
+        },
+        "avatarSeed": {
+          "type": "string",
+          "description": "Seed for player avatar",
+          "maxLength": 50
+        },
+        "score": {
+          "type": "number",
+          "description": "Number of correct answers"
+        },
+        "totalQuestions": {
+          "type": "number",
+          "description": "Total questions in the quiz"
+        },
+        "accuracyPercent": {
+          "type": "number",
+          "description": "Percentage accuracy achieved"
+        },
+        "timeTakenSec": {
+          "type": "number",
+          "description": "Time in seconds taken to complete the quiz"
+        },
+        "categoryMode": {
+          "type": "string",
+          "description": "Quiz category mode played",
+          "enum": ["all", "acm", "ai", "speedrun"]
+        },
+        "rankTitle": {
+          "type": "string",
+          "description": "Achieved rank title",
+          "maxLength": 50
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Creation timestamp"
+        }
+      },
+      "required": ["playerName", "score", "totalQuestions", "categoryMode"]
+    }
+  },
+  "firestore": {
+    "/leaderboard/{entryId}": {
+      "schema": {
+        "$ref": "#/entities/LeaderboardEntry"
+      },
+      "description": "Global leaderboard submissions from benchmark runs"
+    }
+  }
+}
