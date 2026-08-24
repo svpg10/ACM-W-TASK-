@@ -111,39 +111,6 @@ The app features a dark, warm-minimalist aesthetic inspired by premium agency de
 
 ---
 
-## Project Structure
-acm-w-task/
-├── src/
-│   ├── components/
-│   │   ├── Header.tsx              # Sticky navigation bar
-│   │   ├── HeroSection.tsx         # Landing banner + mode cards
-│   │   ├── QuizCard.tsx            # Interactive quiz interface
-│   │   ├── ScoreBoard.tsx          # Results, review, leaderboard submission
-│   │   ├── Leaderboard.tsx         # Live rankings with podium
-│   │   ├── QuestionBankModal.tsx   # Study vault (browse all questions)
-│   │   ├── CertificateModal.tsx    # Printable certificate generator
-│   │   └── PlayerNameModal.tsx     # Player registration modal
-│   ├── data/
-│   │   └── questions.ts            # 20 curated questions + rank tiers
-│   ├── lib/
-│   │   └── firebase.ts             # Firebase init, Firestore CRUD, auth
-│   ├── utils/
-│   │   ├── audio.ts                # Web Audio API sound effects
-│   │   └── confetti.ts             # Celebration particle effects
-│   ├── types.ts                    # TypeScript interfaces & enums
-│   ├── main.tsx                    # App entry point (StrictMode)
-│   ├── App.tsx                     # Root component & state router
-│   └── index.css                   # Tailwind imports + custom styles
-├── server.ts                       # Express REST API server
-├── index.html                      # HTML entry with Google Fonts
-├── package.json                    # Dependencies & scripts
-├── vite.config.ts                  # Vite + Tailwind configuration
-├── tsconfig.json                   # TypeScript compiler options
-├── firebase-applet-config.json     # Firebase project credentials
-├── firebase-blueprint.json         # Firestore schema blueprint
-├── firestore.rules                 # Security rules for Firestore
-├── .env.example                    # Environment variable template
-└── README.md                       # This file
 | Method | Endpoint                     | Description                                                       |
 | ------ | ---------------------------- | ----------------------------------------------------------------- |
 | `GET`  | `/api/health`                | Health check — returns server status                              |
